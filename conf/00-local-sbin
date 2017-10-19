@@ -1,0 +1,7 @@
+#!/bin/bash
+
+`echo $PATH | grep /usr/local/bin >/dev/null`
+
+if [ $? != 0 ]; then
+	export PATH="/usr/local/sbin:$PATH"
+fi
