@@ -4,7 +4,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-if [[ `uname` == 'linux' ]]; then
+if [[ `uname` == 'Linux' ]]; then
 	alias ls='ls --color'
 fi
 
