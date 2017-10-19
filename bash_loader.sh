@@ -1,8 +1,8 @@
 #!/bin/bash
 
-configurationFiles="./.bash.d/conf/*"
+configurationFiles="${HOME}/.bash.d/conf/*"
 
-for f in $configurationFiles 
+for f in ${configurationFiles}
 do
 	source $f
 done
