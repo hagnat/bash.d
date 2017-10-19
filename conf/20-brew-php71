@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ `uname` != 'Darwin' ]]; then
+	return 0;
+fi
+
 brewPhp71="$(brew --prefix homebrew/php/php71)/bin"
 
 `echo $PATH | grep ${brewPhp71} >/dev/null`
@@ -8,7 +12,5 @@ if [ $? == 0 ]; then
 	return 0;
 fi
 
-if [[ `uname` == 'Darwin' ]]; then
-	export PATH="${brewPhp71}:$PATH"
-fi
+export PATH="${brewPhp71}:$PATH"
 
