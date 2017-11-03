@@ -9,17 +9,18 @@ BASH LOADER
     git clone git@github.com:hagnat/bash.d.git .bash.d
 ```
 
-* modify your `~/.bashrc` file to call the `~/.bash.d/bashrc` script
+* run the installer -- *WARNING* the installer will overwrite your original .bashrc script
 
 ```
-    echo "source ~/.bash.d/bashrc" >> ~/.bashrc
+    cd ~/.bash.d
+    make install
 ```
 
 # Defining the PS1 color
 
 The file `~/.bash.d/conf/10-colored-ps1` offers a set of simple colored PS1.
-Choose one, and define it on your `~/.bashrc` file
+Makefile already has a list of scripts for switching colors, so just choose one of them
 
 ```
-    echo "export PS1=${yellowPs1}" >> ~/.bashrc
+    make green
 ```
