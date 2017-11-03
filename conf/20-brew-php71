@@ -9,8 +9,6 @@ brewPhp71="$(brew --prefix homebrew/php/php71)/bin"
 `echo $PATH | grep ${brewPhp71} >/dev/null`
 
 if [ $? == 0 ]; then
-	return 0;
+    export PATH="${brewPhp71}:$PATH"
 fi
-
-export PATH="${brewPhp71}:$PATH"
 
