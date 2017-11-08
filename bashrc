@@ -1,14 +1,19 @@
 #!/bin/bash
 
-globalConfigurations="${HOME}/.bash.d/global-conf/*"
-localConfigurations="${HOME}/.bash.d/local-conf/*"
+globalConfigurations="${HOME}/.bash.d/global-conf"
+localConfigurations="${HOME}/.bash.d/local-conf"
 
-for f in ${globalConfigurations}
-do
-	source $f
-done
+loadConfigurations() {
+    if [[ 0 == `ls -l $1/* 2>/dev/null | wc -l` ]]; then
+        return 0
+    fi
 
-for f in ${localConfigurations}
-do
-    source $f
-done
+    for f in "$1/*"
+    do
+        source $f
+    done
+}
+
+loadConfigurations $globalConfigurations
+loadConfigurations $localConfigurations
+
