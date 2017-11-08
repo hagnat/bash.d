@@ -8,7 +8,8 @@ loadConfigurations() {
         return 0
     fi
 
-    for f in "$1/*"
+    configurationFiles="$1/*"
+    for f in $configurationFiles
     do
         source $f
     done
