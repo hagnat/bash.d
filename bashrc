@@ -4,7 +4,7 @@ globalConfigurations="${HOME}/.bash.d/global-conf"
 localConfigurations="${HOME}/.bash.d/local-conf"
 
 loadConfigurations() {
-    if [[ 0 == `ls -l $1/* 2>/dev/null | wc -l` ]]; then
+    if [[ 0 == `ls -l ${1}/ | wc -l | awk '{$1=$1;print}'` ]]; then
         return 0
     fi
 
