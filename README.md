@@ -14,13 +14,28 @@ BASH LOADER
 ```
     cd ~/.bash.d
     make install
+    source ~/.bashrc
 ```
 
-# Defining the PS1 color
+# Usage
 
-The file `~/.bash.d/conf/10-colored-ps1` offers a set of simple colored PS1.
+## Defining the PS1 color
+
+The file `~/.bash.d/global-conf/10-colored-ps1` offers a set of simple colored PS1.
 Makefile already has a list of scripts for switching colors, so just choose one of them
 
 ```
     make green
+    source ~/.bashrc
 ```
+
+## Crearing your own initialization scripts
+Any script included in the `~/.bash.d/local-conf/` folder will be ignored by git, thus
+allowing you to included custom initialization scripts on it.
+
+The `make green` command, for example, creates a file named `~/.bash.d/local-conf/10-colored-ps1`
+with your color selection enabled.
+
+# Credits
+* Evaldo Junior, for being a command line nerd and storing his own preferences on github
+* Egor Kenkhin, for inspiring me to switch PS1 colors between DEV and PROD environments
