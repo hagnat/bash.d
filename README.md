@@ -38,4 +38,6 @@ with your color selection enabled.
 
 # Credits
 * Evaldo Junior, for being a command line nerd and storing his own preferences on github
-* Egor Kenkhin, for inspiring me to switch PS1 colors between DEV and PROD environments
+* Egor Kenkhin, for inspiring me to switch PS1 colors between DEV and PROD environment
+* all the contributors of [github/gitignore](https://github.com/github/gitignore), which helped
+create the global ignore files used here
