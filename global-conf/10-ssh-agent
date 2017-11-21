@@ -1,0 +1,5 @@
+#
+# adds your public ssh key to ssh agent
+#
+
+ssh-add ${HOME}/.ssh/id_rsa
