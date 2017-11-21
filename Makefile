@@ -1,6 +1,7 @@
 
 symlink:
 	ln -f -s ~/.bash.d/bashrc ~/.bashrc
+	ln -f -s ~/.bash.d/bash_profile ~/.bash_profile
 
 blue:
 	echo 'export PS1=$${bluePs1}' > ~/.bash.d/local-conf/10-colored-ps1
