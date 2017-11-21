@@ -1,5 +1,13 @@
+#!/bin/bash
+
 #
 # adds your public ssh key to ssh agent
 #
 
-ssh-add ${HOME}/.ssh/id_rsa
+public_key="${HOME}/.ssh/id_rsa"
+
+ssh-agent 1>/dev/null
+ssh-add ${public_key} &>/dev/null
+
+alias ssh='ssh -A'
+
