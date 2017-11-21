@@ -6,6 +6,11 @@
 
 public_key="${HOME}/.ssh/id_rsa"
 
+if [[ -f ${public_key} ]]; then
+    echo 'Unable to start SSH Agent. No public ssh key found.'
+    return;
+fi
+
 ssh-agent 1>/dev/null
 ssh-add ${public_key} &>/dev/null
 
