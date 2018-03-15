@@ -12,6 +12,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias tree='tree -C --dirsfirst'
+
 alias pwd='pwd -P'
 alias mkdir='mkdir -p'
 
