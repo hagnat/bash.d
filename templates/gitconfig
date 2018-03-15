@@ -1,0 +1,37 @@
+alias.co=checkout
+alias.cob=checkout -b
+alias.br=branch
+alias.ci=commit
+alias.st=status
+alias.ru=remote update
+alias.lg=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+alias.l=log -4 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+alias.d=diff
+alias.f=remote update
+alias.current-branch=rev-parse --abbrev-ref HEAD
+alias.first-push=!git push --set-upstream origin $(git current-branch)
+alias.code-review=difftool origin/master...
+alias.cl=log --pretty=format:'%Cgreen%cd %Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=short -n20
+alias.dl=!git log $1..HEAD
+alias.amend=commit --amend --no-edit
+alias.nuke=!git branch | grep -v master | grep -v release | grep -v erp | xargs git branch -D
+alias.prune=remote prune origin
+alias.count=!git rev-list --count $1..HEAD
+alias.squash=!git rebase -i HEAD~$1
+alias.timeline=!for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
+alias.authors=shortlog -s -n --all --no-merges
+
+push.default=simple
+
+tag.sort=v:refname
+
+tig.split-view-height=90%
+
+core.excludesfile=/home/leaseweb/.gitignore_global
+core.editor=vim
+
+transfer.fsckobjects=true
+
+fetch.fsckobjects=true
+
+receive.fsckobjects=true

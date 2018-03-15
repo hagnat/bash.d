@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+filename="${HOME}/.bash.d/templates/gitconfig"
+
+while IFS='=' read -r key value
+do
+    if [[ $key ]]; then
+        git config --global --replace-all "${key}" "${value}"
+    fi
+done < "$filename"
+
