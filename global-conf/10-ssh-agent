@@ -7,11 +7,16 @@
 public_key="${HOME}/.ssh/id_rsa"
 
 if [[ ! -f ${public_key} ]]; then
-    echo 'Unable to start SSH Agent. No public ssh key found.'
+    echo '[bash.d] Unable to start SSH Agent. No public ssh key found.'
     return;
 fi
 
-ssh-agent 1>/dev/null
+if [[ -d "${HOME}/.bash.d/vendor/ssh-agent" ]]; then
+    source ${HOME}/.bash.d/vendor/ssh-agent/ssh-find-agent.sh -a || eval $(ssh-agent) > /dev/null
+else
+    eval $( ssh-agent ) >/dev/null
+fi
+
 ssh-add ${public_key} &>/dev/null
 
 alias ssh='ssh -A'
