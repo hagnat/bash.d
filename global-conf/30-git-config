@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+tput el
 echo -n "configuring gitconfig" $'\r'
 
 filename="${HOME}/.bash.d/templates/gitconfig"

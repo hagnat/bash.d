@@ -1,5 +1,6 @@
 #!/bin/bash
 
+tput el
 echo -n "defining alias" $'\r'
 
 alias grep='grep --color=auto'

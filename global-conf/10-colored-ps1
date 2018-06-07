@@ -1,5 +1,6 @@
 #!/bin/bash
 
+tput el
 echo -n "defining PS1 colors" $'\r'
 
 export bluePs1='\[\e[1;34m\]\u@$(hostname -f)\[\e[0;34m\] \w\[\e[0m\]\$ '

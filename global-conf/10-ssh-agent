@@ -1,5 +1,6 @@
 #!/bin/bash
 
+tput el
 echo -n "add your public ssh key to ssh agent" $'\r'
 
 public_key="${HOME}/.ssh/id_rsa"

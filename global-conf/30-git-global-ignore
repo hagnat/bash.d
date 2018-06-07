@@ -1,5 +1,6 @@
 #!/bin/bash
 
+tput el
 echo -n "configuring global gitignore" $'\r'
 
 GITIGNORE_GLOBAL=${HOME}/.gitignore_global
