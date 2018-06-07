@@ -4,6 +4,8 @@ if [ `uname` != 'Darwin' ]; then
 	return 0;
 fi
 
+echo 'configuring brew'
+
 brewPhp71="$(brew --prefix php@7.1)/bin"
 
 if [ -d $brewPhp71 ]; then

@@ -1,1 +1,3 @@
+echo 'defining umask'
+
 umask 022

@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#
-# adds your public ssh key to ssh agent
-#
+echo 'add your public ssh key to ssh agent'
 
 public_key="${HOME}/.ssh/id_rsa"
 
@@ -11,13 +9,7 @@ if [[ ! -f ${public_key} ]]; then
     return;
 fi
 
-if [[ -d "${HOME}/.bash.d/vendor/ssh-agent" ]]; then
-    source ${HOME}/.bash.d/vendor/ssh-agent/ssh-find-agent.sh -a || eval $(ssh-agent) > /dev/null
-else
-    eval $( ssh-agent ) >/dev/null
-fi
+eval $( ssh-agent ) >/dev/null
 
 ssh-add ${public_key} &>/dev/null
-
-alias ssh='ssh -A'
 

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ `uname` == 'Darwin' ]; then
+    echo 'defining ls colors'
     export CLICOLOR=1
     export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo 'defining PS1 colors'
+
 export bluePs1='\[\e[1;34m\]\u@$(hostname -f)\[\e[0;34m\] \w\[\e[0m\]\$ '
 export cyanPs1='\[\e[1;36m\]\u@$(hostname -f)\[\e[0;36m\] \w\[\e[0m\]\$ '
 export greenPs1='\[\e[1;32m\]\u@$(hostname -f)\[\e[0;32m\] \w\[\e[0m\]\$ '

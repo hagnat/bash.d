@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo 'configuring global gitignore'
+
 GITIGNORE_GLOBAL=${HOME}/.gitignore_global
 GITIGNORE_TEMPLATES=${HOME}/.bash.d/templates/gitignore/*.gitignore
 

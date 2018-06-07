@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ `uname` == 'Darwin' ]; then
+    echo 'enabling git completion'
     source ~/.bash.d/templates/gitcompletion.bash
 fi
 

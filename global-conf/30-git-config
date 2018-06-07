@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+echo 'configuring gitconfig'
+
 filename="${HOME}/.bash.d/templates/gitconfig"
 
 while IFS='=' read -r key value
