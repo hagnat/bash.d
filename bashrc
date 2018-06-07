@@ -18,3 +18,4 @@ loadConfigurations() {
 loadConfigurations $globalConfigurations
 loadConfigurations $localConfigurations
 
+tput el
