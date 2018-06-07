@@ -1,3 +1,5 @@
-echo 'defining umask'
+#!/bin/bash
+
+echo -n "defining umask" $'\r'
 
 umask 022

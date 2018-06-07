@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'defining default EDITOR'
+echo -n "defining default EDITOR" $'\r'
 
 export EDITOR=vim
 

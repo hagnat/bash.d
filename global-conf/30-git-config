@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-echo 'configuring gitconfig'
+echo -n "configuring gitconfig" $'\r'
 
 filename="${HOME}/.bash.d/templates/gitconfig"
 

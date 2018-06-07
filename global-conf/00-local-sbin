@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'adding /usr/local/sbin to PATH'
+echo -n "adding /usr/local/sbin to PATH" $'\r'
 
 `echo $PATH | grep /usr/local/sbin >/dev/null`
 

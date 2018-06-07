@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'defining alias'
+echo -n "defining alias" $'\r'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

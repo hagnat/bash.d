@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'defining PS1 colors'
+echo -n "defining PS1 colors" $'\r'
 
 export bluePs1='\[\e[1;34m\]\u@$(hostname -f)\[\e[0;34m\] \w\[\e[0m\]\$ '
 export cyanPs1='\[\e[1;36m\]\u@$(hostname -f)\[\e[0;36m\] \w\[\e[0m\]\$ '
