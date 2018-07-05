@@ -20,7 +20,7 @@ alias.count=!git rev-list --count $1..HEAD
 alias.squash=!git rebase -i HEAD~$1
 alias.timeline=!for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
 alias.authors=shortlog -s -n --all --no-merges
-alias.remove-merged=!git branch --remote --merged release | grep -v "(^\*|master|release|HEAD)" | awk '{split($0,a,"origin/"); print a[2]}' | xargs git push origin --delete
+alias.remove-merged=!git branch --remote --merged master | egrep -v "master|release|HEAD" | awk '{split($0,a,"origin/"); print a[2]}' | xargs git push origin --delete
 
 push.default=simple
 
