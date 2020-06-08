@@ -1,0 +1,22 @@
+#!/bin/bash
+
+tput el
+echo -n "defining local alias" $'\r'
+
+alias dc='docker-compose'
+alias docker-composer='docker-compose'
+
+alias dashdir="cd ~/projects/oss/backend/dashboard"
+alias coredir="cd ~/projects/sms-core/core"
+alias daemonsdir="cd ~/projects/frontend/daemons"
+alias apidir="cd ~/projects/api0/rest-api"
+
+alias devstart="(cd ~/projects/supportive/dash-core-development/;./start.sh)"
+alias devstop="(cd ~/projects/supportive/dash-core-development/;./stop.sh)"
+alias devrestart="(cd ~/projects/supportive/dash-core-development/;./restart.sh)"
+alias devcleanup="(cd ~/projects/supportive/dash-core-development/;./cleanup.sh)"
+
+alias dashssh="dashdir;docker-compose exec dashboard bash"
+alias coressh="coredir;docker-compose exec web bash"
+alias daemonsssh="daemonsdir;docker-compose exec daemons bash"
+alias apissh="apidir;docker-compose exec api bash"

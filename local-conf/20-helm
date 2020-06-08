@@ -1,0 +1,8 @@
+#!/bin/bash
+
+tput el
+echo -n "defining alias" $'\r'
+
+export TILLER_NAMESPACE=core-helm
+export HELM_TLS_ENABLE=true
+
