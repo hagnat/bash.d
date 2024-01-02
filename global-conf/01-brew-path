@@ -1,0 +1,6 @@
+#!/bin/bash
+
+tput el
+echo -n "export Brew shell variables" $'\r'
+
+eval "$(/usr/local/bin/brew shellenv)"
