@@ -29,12 +29,16 @@ Makefile already has a list of scripts for switching colors, so just choose one 
     source ~/.bashrc
 ```
 
-## Crearing your own initialization scripts
+## Creating your own initialization scripts
 Any script included in the `~/.bash.d/local-conf/` folder will be ignored by git, thus
 allowing you to included custom initialization scripts on it.
 
 The `make green` command, for example, creates a file named `~/.bash.d/local-conf/10-colored-ps1`
 with your color selection enabled.
+
+## Deprecated configurations
+Older scripts are stored on the `~/.bash.d/deprecated-conf/` folder, just in case they are to be
+restored to use later, to save as helpers for newer scripts, or just for memento's sake.
 
 # Credits
 * Evaldo Junior, for being a command line nerd and storing his own preferences on github
