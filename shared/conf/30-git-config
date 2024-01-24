@@ -3,7 +3,7 @@
 tput el
 echo -n "configuring gitconfig" $'\r'
 
-filename="${HOME}/.bash.d/templates/gitconfig"
+filename="${HOME}/.bash.d/var/templates/gitconfig"
 
 while IFS='=' read -r key value
 do

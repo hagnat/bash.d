@@ -3,6 +3,5 @@
 if [ `uname` == 'Darwin' ]; then
     tput el
     echo -n "enabling git completion" $'\r'
-    source ~/.bash.d/templates/gitcompletion.bash
+    source ~/.bash.d/var/templates/gitcompletion.bash
 fi
-

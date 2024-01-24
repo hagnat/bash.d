@@ -4,7 +4,7 @@ tput el
 echo -n "configuring global gitignore" $'\r'
 
 GITIGNORE_GLOBAL=${HOME}/.gitignore_global
-GITIGNORE_TEMPLATES=${HOME}/.bash.d/templates/gitignore/*.gitignore
+GITIGNORE_TEMPLATES=${HOME}/.bash.d/var/templates/gitignore/*.gitignore
 
 touch ~/.gitignore_global
 
