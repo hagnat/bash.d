@@ -28,7 +28,6 @@ tag.sort=v:refname
 
 tig.split-view-height=90%
 
-core.excludesfile=/home/leaseweb/.gitignore_global
 core.editor=vim
 
 transfer.fsckobjects=true
