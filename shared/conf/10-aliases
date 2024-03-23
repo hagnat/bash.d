@@ -19,5 +19,4 @@ alias tree='tree -C --dirsfirst'
 
 alias pwd='pwd -P'
 alias mkdir='mkdir -p'
-
-
+alias cd='cd -P'
