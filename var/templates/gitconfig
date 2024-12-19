@@ -21,7 +21,7 @@ alias.squash=!git rebase -i HEAD~$1
 alias.old-timeline=!for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
 alias.timeline=!f() { echo "updatedAt; relativeAt; commiterEmail; branch"; for branch in `git branch $1 --sort=-committerdate | egrep -v "HEAD|master"`; do echo `git show --format="%as; %cr; %ce;" $branch | head -n 1` $branch; done; }; f
 alias.authors=shortlog -s -n --all --no-merges
-alias.remove-merged=!git branch --remote --merged master | egrep -v "master|release|HEAD" | awk '{split($0,a,"origin/"); print a[2]}' | xargs git push origin --delete
+alias.merged=!git branch --remote --merged main | egrep -v "master|main|release|stage|HEAD" | awk '{split($0,a,"origin/"); print a[2]}'
 
 alias.say=!echo "$@\n"
 
